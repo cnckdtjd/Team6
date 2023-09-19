@@ -53,12 +53,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 jar {
-	manifest { // 빌드시 Main-Class 설정
-		attributes 'Main-Class': 'com.example.solum_test.STestApplication'
-	}
+	enabled = false
 }
 
-bootJar {
-	jar.enabled = true // 빌드시 jar 을 실행
-}
 
