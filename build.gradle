@@ -55,7 +55,7 @@ tasks.named('test') {
 jar {
     manifest {
 	attributes 'Manifest-Version': '1.0'
-        attributes 'Main-Class': 'org.springframework.boot.loader.JarLauncher'
+        attributes 'Main-Class': 'org.springframework.boot'
     }
 }
 
