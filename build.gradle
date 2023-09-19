@@ -52,11 +52,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-task buildJar(type:jar) {
+bootJar {
+    archiveBaseName = 'manifest_control_example'
     manifest {
-        attributes 'Main-Class': 'org.springframework.boot'
+        attributes(
+            "Application-Version" : "1.0.0"
+        )
     }
-    with jar
 }
 apply plugin: 'application'
 
