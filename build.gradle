@@ -54,8 +54,8 @@ tasks.named('test') {
 }
 jar {
     manifest {
-	attributes 'Manifest-Version': '1.0'
-        attributes 'Main-Class': 'org.springframework.boot'
+        attributes("Implementation-Title": "Gradle",
+                   "Implementation-Version": archiveVersion)
     }
 }
 
