@@ -52,6 +52,9 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+apply plugin: 'application'
+
 jar {
     manifest {
         attributes('Manifest-Version': '1.0',
@@ -61,7 +64,7 @@ jar {
 		'Spring-Boot-Classes': BOOT-INF/classes/,
 		'Spring-Boot-Lib': BOOT-INF/lib/,
 		'Spring-Boot-Version': 2.7.7,
-		'Main-Class': 'org.springframework.boot.loader.JarLauncher'
+		'Main-Class': 'org.springframework.boot.loader.JarLauncher')
     }
 }
 
