@@ -53,7 +53,10 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 jar {
-	enabled = false
+    manifest {
+	attributes 'Manifest-Version': '1.0'
+        attributes 'Main-Class': 'org.springframework.boot.loader.JarLauncher'
+    }
 }
 
 
